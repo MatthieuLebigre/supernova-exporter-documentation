@@ -1,6 +1,16 @@
 {* Fetch block from injection context, expected type 'Code' *}
 {[ const block = context /]}
 
+{* This block is variant enabled, fetch it *}
+{[ let variant = block.variantKey /]}
+
+{[ if (variant === "egg-render") ]}
+{* Variant for a EGG live demo *}
+{{ safeHtmlString(block) }}
+{[ elseif (variant === "egg-render-main") ]}
+{* Variant for the EGG main live demo: nothing to render, because it will be displayed in the header *}
+{[ else ]}
+{* Default, render the code snippet *}
 <div class="content-block content-block--code code-block-container">
     {* Generate code which will be automatically highlighted *}
     <pre class="code-block"><code class="{{ block.codeLanguage ? block.codeLanguage.lowercased().prefixed("language-") : "" }}" data-prismjs-copy="Copy">
@@ -13,3 +23,4 @@
         <p class="caption">{{ block.caption }}</p>
     {[/]}
 </div>
+{[/]}

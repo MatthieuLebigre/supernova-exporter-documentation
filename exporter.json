@@ -1,12 +1,12 @@
 {
-  "id": "io.supernova.documentation-main",
-  "name": "Default Documentation",
-  "description": "Default customizable exporter for design system documentation",
-  "author": "Supernova",
-  "organization": "Supernova",
+  "id": "io.supernova.documentation-ubisoft",
+  "name": "Ubisoft Documentation",
+  "description": "Customized documentation exporter for Ubisoft Design Systems",
+  "author": "Ubisoft",
+  "organization": "Ubisoft",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.7.3",
+  "version": "0.0.3",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -59,10 +59,45 @@
         "category": "Look & feel"
       },
       {
+        "key": "lookAndFeelAccentInkColor",
+        "type": "color",
+        "label": "On accent color",
+        "description": "Used as a foreground color on an accent surface. Default color: #ffffff.",
+        "category": "Look & feel"
+      },
+      {
         "key": "lookAndFeelAccentSurfaceColor",
         "type": "color",
         "label": "Surface accent color",
         "description": "Used for backgrounds of active and selected items. This color should meet AA+ contract criteria against the main accent color. Default color: #ecf4ff.",
+        "category": "Look & feel"
+      },
+      {
+        "key": "lookAndFeelInkPrimaryColor",
+        "type": "color",
+        "label": "Main text",
+        "description": "Used for the color of the main text. Default color: #141618.",
+        "category": "Look & feel"
+      },
+      {
+        "key": "lookAndFeelInkSecondaryColor",
+        "type": "color",
+        "label": "Secondary text",
+        "description": "Used for the color of the secondary text. Default color: #515964.",
+        "category": "Look & feel"
+      },
+      {
+        "key": "lookAndFeelInkTertiaryColor",
+        "type": "color",
+        "label": "Tertiary text",
+        "description": "Used for the color of the tertiary text (eyebrow headings). Default color: #6a707a.",
+        "category": "Look & feel"
+      },
+      {
+        "key": "lookAndFeelInkInvertedColor",
+        "type": "color",
+        "label": "Inverted text",
+        "description": "Used for the color of the inverted text, e.g. for use on dark bg. Default color: #ffffff.",
         "category": "Look & feel"
       },
       {
@@ -128,9 +163,17 @@
         "default": 1400
       },
       {
+        "key": "limitContentMaxWidth",
+        "type": "boolean",
+        "label": "Limit maximum content container width",
+        "description": "Content will take the whole width if unchecked",
+        "category": "Layout",
+        "default": true
+      },
+      {
         "key": "contentContainerWidth",
         "type": "number",
-        "label": "Content container width",
+        "label": "Content maximum container width",
         "description": "The maximum width of the content container, measured in pixels. Default (and minimum) width: 756px.",
         "category": "Layout",
         "default": 756
@@ -221,6 +264,149 @@
         "default": false
       },
       {
+        "key": "topNavigationShowQuickLinks",
+        "type": "boolean",
+        "label": "Show Quick Links in site header",
+        "description": "When enabled, a list of quick links will be added to the top navigation bar in your documentation.",
+        "category": "Top navigation",
+        "default": false
+      },
+      {
+        "key": "topNavigationQuickLinkUrl1",
+        "type": "string",
+        "label": "Quick Link 1: Url",
+        "description": "The url for the Quick Link 1.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkAriaLabel1",
+        "type": "string",
+        "label": "Quick Link 1: aria-label",
+        "description": "The aria-label for the Quick Link 1.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkIcon1",
+        "type": "image",
+        "label": "Quick Link 1: icon",
+        "description": "The icon for the Quick Link 1.",
+        "category": "Top navigation"
+      },
+      {
+        "key": "topNavigationQuickLinkUrl2",
+        "type": "string",
+        "label": "Quick Link 2: Url",
+        "description": "The url for the Quick Link 2.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkAriaLabel2",
+        "type": "string",
+        "label": "Quick Link 2: aria-label",
+        "description": "The aria-label for the Quick Link 2.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkIcon2",
+        "type": "image",
+        "label": "Quick Link 2: icon",
+        "description": "The icon for the Quick Link 2.",
+        "category": "Top navigation"
+      },
+      {
+        "key": "topNavigationQuickLinkUrl3",
+        "type": "string",
+        "label": "Quick Link 3: Url",
+        "description": "The url for the Quick Link 3.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkAriaLabel3",
+        "type": "string",
+        "label": "Quick Link 3: aria-label",
+        "description": "The aria-label for the Quick Link 3.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkIcon3",
+        "type": "image",
+        "label": "Quick Link 3: icon",
+        "description": "The icon for the Quick Link 3.",
+        "category": "Top navigation"
+      },
+      {
+        "key": "topNavigationQuickLinkUrl4",
+        "type": "string",
+        "label": "Quick Link 4: Url",
+        "description": "The url for the Quick Link 4",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkAriaLabel4",
+        "type": "string",
+        "label": "Quick Link 4: aria-label",
+        "description": "The aria-label for the Quick Link 4.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkIcon4",
+        "type": "image",
+        "label": "Quick Link 4: icon",
+        "description": "The icon for the Quick Link 4.",
+        "category": "Top navigation"
+      },
+      {
+        "key": "topNavigationQuickLinkUrl5",
+        "type": "string",
+        "label": "Quick Link 5: Url",
+        "description": "The url for the Quick Link 5.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkAriaLabel5",
+        "type": "string",
+        "label": "Quick Link 5: aria-label",
+        "description": "The aria-label for the Quick Link 5.",
+        "default": "",
+        "category": "Top navigation",
+        "isMultiline": false,
+        "inputType": "plain"
+      },
+      {
+        "key": "topNavigationQuickLinkIcon5",
+        "type": "image",
+        "label": "Quick Link 5: icon",
+        "description": "The icon for the Quick Link 5.",
+        "category": "Top navigation"
+      },
+      {
         "key": "sideNavigationStyle",
         "type": "enum",
         "label": "Color style",
@@ -293,6 +479,15 @@
         "default": ""
       },
       {
+        "key": "headerLayoutStyleHomepage",
+        "type": "enum",
+        "label": "Homepage header style",
+        "description": "The visual style of the header specific for the homepage. Choose between Default (edge to edge) and Boxed (with space surrounding the header).",
+        "category": "Homepage",
+        "values": ["Default", "Boxed"],
+        "default": "Default"
+      },
+      {
         "key": "lookAndFeelHeaderLayoutStyle",
         "type": "enum",
         "label": "Page header style",
@@ -313,6 +508,13 @@
         "type": "color",
         "label": "Main background color in page header",
         "description": "The background color used in the page header throughout your documentation. You can still choose a different color for individual pages.",
+        "category": "Pages"
+      },
+      {
+        "key": "lookAndFeelPageBackgroundColor",
+        "type": "color",
+        "label": "Main background color in page",
+        "description": "The background color used in the page throughout your documentation.",
         "category": "Pages"
       },
       {
@@ -737,6 +939,34 @@
             "label": "Date of update"
           }
         ]
+      },
+      {
+        "key": "io.ubisoft.documentation-main.ux-guidebook",
+        "category": "Media Blocks",
+        "title": "UX Guidebook",
+        "description": "Embed a UX Guidebook page",
+        "icon": "icons/custom-block-checklist-all.png",
+        "mode": "block",
+        "properties": [
+          {
+            "key": "url",
+            "default": "",
+            "type": "string",
+            "label": "UX Guidebook URL"
+          },
+          {
+            "key": "height",
+            "default": 700,
+            "type": "number",
+            "label": "Custom height (in pixel)"
+          },
+          {
+            "key": "caption",
+            "default": "",
+            "type": "string",
+            "label": "Caption"
+          }
+        ]
       }
     ],
     "blockVariants": {
@@ -764,6 +994,12 @@
           "name": "Accordion",
           "key": "accordion",
           "description": "Tabs displayed as an accordion.",
+          "thumbnail": "thumbnails/Tabs_Accordion.png"
+        },
+        {
+          "name": "Do & Don't",
+          "key": "do-dont",
+          "description": "Displays a Do & Don't comparison",
           "thumbnail": "thumbnails/Tabs_Accordion.png"
         }
       ],
@@ -1071,6 +1307,24 @@
           "key": "boxed",
           "description": "Markdown content wrapped in the container with secondary background.",
           "thumbnail": "thumbnails/CustomMarkdown_Boxed.png"
+        }
+      ],
+      "Code": [
+        {
+          "name": "Default",
+          "key": "default",
+          "isDefault": true,
+          "description": "Display as code snippet."
+        },
+        {
+          "name": "EGG live demo",
+          "key": "egg-render",
+          "description": "Display the HTML as a live Demo (with EGG components)"
+        },
+        {
+          "name": "EGG main demo",
+          "key": "egg-render-main",
+          "description": "Display the HTML as the main live Demo in the page header (with EGG components)"
         }
       ]
     }

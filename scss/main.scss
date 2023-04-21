@@ -85,6 +85,15 @@
 
 @import './legacy/stylesheet';
 
+
+/*  EGG
+/* =================================== */
+@import '@egg/theme-default/light.css';
+
+/*  Ubisoft custom blocks
+/* =================================== */
+@import './ubisoft-custom.scss';
+
 /* =================================== */
 
 

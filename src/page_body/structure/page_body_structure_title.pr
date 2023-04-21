@@ -1,6 +1,7 @@
 
 {* Get page from context *}
 {[ let page = context /]}
+{[ let rootGroup = ds.rootDocumentationGroup() /]}
 
 {* Get containing group. If the group represents tab, then use that group configuration to build header, and use its title as well. For non-tabbed pages, configuration is taken from the page object *}
 {[ let group = page.parent /]}
@@ -8,9 +9,16 @@
 {[ let configuration = (groupIsTabContainer ? group.configuration : page.configuration) /]}
 {[ let headerConfiguration = configuration.header /]}
 {[ let globalConfiguration = exportConfiguration() /]}
+{[ let isHomepage = isHomepage(page, rootGroup) /]}
 
 {* Title *}
 {[ let title = (group.groupBehavior === "Tabs" ? htmlSafeString(group.title) : htmlSafeString(page.title)) /]}
+
+{* Main Demo (optional) *}
+{[ let mainDemo = findComponentMainDemo(page) /]}
+
+{* Component description (optional) *}
+{[ let componentDescription = findComponentDescription(page) /]}
 
 {* Configure appropriate classes based on the configuration *}
 {[ let centeredClass = (headerConfiguration.alignment === "Center" ? " centered" : "") /]}
@@ -24,8 +32,20 @@
     {[ flexedClass = " flexed" /]}
 {[/]}
 
-{[ if (globalConfiguration.lookAndFeelHeaderLayoutStyle === "Boxed") ]}
-    {[ layoutTypeClass = " style-boxed" /]}
+{[ if isHomepage ]}
+    {[ if (globalConfiguration.headerLayoutStyleHomepage === "Boxed") ]}
+        {[ layoutTypeClass = " style-boxed" /]}
+        {[ if (globalConfiguration.limitContentMaxWidth) ]}
+            {[ layoutTypeClass = " style-boxed limit-width" /]}
+        {[/]}
+    {[/]}
+{[ else ]}
+    {[ if (globalConfiguration.lookAndFeelHeaderLayoutStyle === "Boxed") ]}
+        {[ layoutTypeClass = " style-boxed" /]}
+        {[ if (globalConfiguration.limitContentMaxWidth) ]}
+            {[ layoutTypeClass = " style-boxed limit-width" /]}
+        {[/]}
+    {[/]}
 {[/]}
 
 {* Background image set on the page overrides all settings *}
@@ -79,9 +99,21 @@
             {[ if headerConfiguration.description ]}
                 <p class="subtitle" style="{{ style }}">{{ withHTMLNewlines(htmlSafeString(headerConfiguration.description)) }}</p>
             {[/]}
+            {[ if mainDemo ]}
+                {{ safeHtmlString(mainDemo) }}
+            {[/]}
         {[/]}
     </div>
 </div>
+{[ if (componentDescription && componentDescription.length !== 0) ]}
+    <div class="content-container">
+        <section id="section-content-page" class="ubisoft-block-component-desc">
+            {[ for block in componentDescription ]}
+                {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}
+            {[/]}
+        </section>
+    </div>
+{[/]}
 
 {* Generate tabs if parent is group *}
 {[ if groupIsTabContainer ]}
@@ -93,10 +125,12 @@
         <ul class="nav nav-tabs" id="page-tab" role="tablist">
             {[ for tab in group.pages ]}
                 {[ if isExportable(tab) ]}
-                <li class="nav-item" role="presentation">
-                    {[ let url = pageUrl(tab, ds.documentationDomain()) /]}
-                    <a class="nav-link {{ page.id === tab.id ? "active" : "" }}" id="tab-{{ tab.id }}" href="{{ url }}" role="tab" aria-selected="{{ page.id === tab.id ? "true" : "false" }}"><span>{{ htmlSafeString(tab.title) }}</span></a>
-                </li>
+                    {[ if (htmlSafeString(tab.title) !== "__COMPONENT_DESCRIPTION__" && htmlSafeString(tab.title) !== "__SHARED_DEMO__") ]}
+                    <li class="nav-item" role="presentation">
+                        {[ let url = pageUrl(tab, ds.documentationDomain()) /]}
+                        <a class="nav-link {{ page.id === tab.id ? "active" : "" }}" id="tab-{{ tab.id }}" href="{{ url }}" role="tab" aria-selected="{{ page.id === tab.id ? "true" : "false" }}"><span>{{ htmlSafeString(tab.title) }}</span></a>
+                    </li>
+                    {[/]}
                 {[/]}
             {[/]}
         </ul>

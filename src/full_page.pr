@@ -28,6 +28,9 @@
 </script>
 {[/]}
 
+<!-- EGG components -->
+<script src="https://ubistatic-a.akamaihd.net/0129/wc/egg/egg-wc/web/0.18.9/dist/bundle.umd.js"></script>
+
 {* Add search *}
 {[ inject "page_search" context page /]}
 
@@ -77,6 +80,21 @@
             <div class="content-container">
               <section id="section-content-page">
                 <main class="tab-content{{ centeredClass }}" id="page-tab-content">
+
+                {* Start Ubisoft custom *}
+                {* Component shared demo (optional) *}
+                {[ let componentSharedDemo = findSharedComponentDemo(page) /]}
+
+                {[ if (componentSharedDemo && componentSharedDemo.length !== 0) ]}
+                    <div class="content-container">
+                        <section id="section-content-page" class="ubisoft-block-component-desc">
+                            {[ for block in componentSharedDemo ]}
+                                {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}
+                            {[/]}
+                        </section>
+                    </div>
+                {[/]}
+                {* End Ubisoft custom *}
 
                 {[ for block in page.blocks ]}
                     {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}

@@ -1,0 +1,32 @@
+/** Fix icon alignment issue*/
+.site-logo {
+    vertical-align: middle;
+}
+
+/** Custom blocks */
+.do-block {
+    padding: 24px;
+    background: #f4faed;
+    margin-right: 8px;
+}
+
+.dont-block {
+    padding: 24px;
+    background: #feece9;
+    margin-left: 8px;
+}
+
+.ubisoft-block-component-desc {
+    margin-bottom: 0 !important;
+}
+
+.quick-links {
+    display: flex;
+    gap: 12px;
+    margin-right: 12px;
+}
+
+.quick-link {
+    height: 40px;
+    width: 40px;
+}

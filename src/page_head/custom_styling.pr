@@ -21,6 +21,38 @@
     {[ if accentAltColor ]}
     --colorAccentAlt: {{ accentAltColor }};
     {[/]}
+    {* Start of Ubisoft custom *}
+    {[ let accentInkColorOption = configuration.lookAndFeelAccentInkColor /]}
+    {[ let accentInkColor = (accentInkColorOption ? getColorValueFromSettings(accentInkColorOption.value, ((accentInkColorOption.aliasTo !== null) ? ds.tokenById(accentInkColorOption.aliasTo) : null)) : null) /]}
+    {[ if accentInkColor ]}
+    --colorAccentInk: {{ accentInkColor }};
+    {[/]}
+    {[ let inkPrimaryColorOption = configuration.lookAndFeelInkPrimaryColor /]}
+    {[ let inkPrimaryColor = (inkPrimaryColorOption ? getColorValueFromSettings(inkPrimaryColorOption.value, ((inkPrimaryColorOption.aliasTo !== null) ? ds.tokenById(inkPrimaryColorOption.aliasTo) : null)) : null) /]}
+    {[ if inkPrimaryColor ]}
+    --colorInkPrimary: {{ inkPrimaryColor }};
+    {[/]}
+    {[ let inkSecondaryColorOption = configuration.lookAndFeelInkSecondaryColor /]}
+    {[ let inkSecondaryColor = (inkSecondaryColorOption ? getColorValueFromSettings(inkSecondaryColorOption.value, ((inkSecondaryColorOption.aliasTo !== null) ? ds.tokenById(inkSecondaryColorOption.aliasTo) : null)) : null) /]}
+    {[ if inkSecondaryColor ]}
+    --colorInkSecondary: {{ inkSecondaryColor }};
+    {[/]}
+    {[ let inkTertiaryColorOption = configuration.lookAndFeelInkTertiaryColor /]}
+    {[ let inkTertiaryColor = (inkTertiaryColorOption ? getColorValueFromSettings(inkTertiaryColorOption.value, ((inkTertiaryColorOption.aliasTo !== null) ? ds.tokenById(inkTertiaryColorOption.aliasTo) : null)) : null) /]}
+    {[ if inkTertiaryColor ]}
+    --colorInkTertiary: {{ inkTertiaryColor }};
+    {[/]}
+    {[ let inkInvertedColorOption = configuration.lookAndFeelInkInvertedColor /]}
+    {[ let inkInvertedColor = (inkInvertedColorOption ? getColorValueFromSettings(inkInvertedColorOption.value, ((inkInvertedColorOption.aliasTo !== null) ? ds.tokenById(inkInvertedColorOption.aliasTo) : null)) : null) /]}
+    {[ if inkInvertedColor ]}
+    --colorInkInverted: {{ inkInvertedColor }};
+    {[/]}
+    {[ let pageBackgroundColorOption = configuration.lookAndFeelPageBackgroundColor /]}
+    {[ let pageBackgroundColor = (pageBackgroundColorOption ? getColorValueFromSettings(pageBackgroundColorOption.value, ((pageBackgroundColorOption.aliasTo !== null) ? ds.tokenById(pageBackgroundColorOption.aliasTo) : null)) : null) /]}
+    {[ if pageBackgroundColor ]}
+    --colorBackgroundPrimary: {{ pageBackgroundColor }};
+    {[/]}
+    {* End of Ubisoft custom *}
     {[ let accentSurfaceColorOption = configuration.lookAndFeelAccentSurfaceColor /]}
     {[ let accentSurfaceColor = (accentSurfaceColorOption ? getColorValueFromSettings(accentSurfaceColorOption.value, ((accentSurfaceColorOption.aliasTo !== null) ? ds.tokenById(accentSurfaceColorOption.aliasTo) : null)) : null) /]}
     {[ if accentSurfaceColor ]}
@@ -36,6 +68,9 @@
     --contentMaxWidth: {{ configuration.contentContainerWidth }}px;
     {[ else ]}
     --contentMaxWidth: 756px;
+    {[/]}
+    {[ if !configuration.limitContentMaxWidth ]}
+    --contentMaxWidth: 100%;
     {[/]}
     {* Top navigation *}
     {[ if (configuration.topNavigationHeight !== 0) ]}

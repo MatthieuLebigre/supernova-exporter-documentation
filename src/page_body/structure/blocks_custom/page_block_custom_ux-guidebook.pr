@@ -1,0 +1,18 @@
+{* Get generic embed block payload *}
+{[ const block = context /]}
+
+{* Create generic embed block *}
+{[ if block.properties.url ]}
+  {* Get the correctly formatted url *}
+  {[ let formattedUrl = formatUXGuidebookUrl(block.properties.url) /]}
+
+  <div class="content-block content-block--embed">
+    <div class="embed-container" style="height: {{ block.properties.height ? block.properties.height : 700 }}px">
+      <iframe title="UX Guidebook" class="embed-responsive-item" src="{{ formattedUrl }}" allowfullscreen loading="lazy" aria-label="Iframe with embedded link"></iframe>
+    </div>
+
+    {[ if block.properties.caption ]}
+        <p class="caption">{{ block.properties.caption }}</p>
+    {[/]}
+  </div>
+{[/]}

@@ -94,6 +94,47 @@
                         </div>
                     </div>
                     {[/]}
+                    {* Start Ubisoft custom (quick links) *}
+                    {[ if configuration.topNavigationShowQuickLinks ]}
+                        <div class="quick-links">
+                        {[ if (configuration.topNavigationQuickLinkUrl1 && ((configuration.topNavigationQuickLinkIcon1 !== null) && (configuration.topNavigationQuickLinkIcon1.assetUrl !== null))) ]}
+                            {[ let linkLabel = (configuration.topNavigationQuickLinkAriaLabel1 ? configuration.topNavigationQuickLinkAriaLabel1 : "Open site") /]}
+                            {[ let linkUrl = configuration.topNavigationQuickLinkUrl1 /]}
+                            <a href="{{ linkUrl }}" class="quick-link" target="blank" aria-label="{{ linkLabel }}">
+                                <img src="{{ configuration.topNavigationQuickLinkIcon1.assetUrl }}" alt="{{ linkLabel }}" />
+                            </a>
+                        {[/]}
+                        {[ if (configuration.topNavigationQuickLinkUrl2 && ((configuration.topNavigationQuickLinkIcon2 !== null) && (configuration.topNavigationQuickLinkIcon2.assetUrl !== null))) ]}
+                            {[ let linkLabel = (configuration.topNavigationQuickLinkAriaLabel2 ? configuration.topNavigationQuickLinkAriaLabel2 : "Open site") /]}
+                            {[ let linkUrl = configuration.topNavigationQuickLinkUrl2 /]}
+                            <a href="{{ linkUrl }}" class="quick-link" target="blank" aria-label="{{ linkLabel }}">
+                                <img src="{{ configuration.topNavigationQuickLinkIcon2.assetUrl }}" alt="{{ linkLabel }}" />
+                            </a>
+                        {[/]}
+                        {[ if (configuration.topNavigationQuickLinkUrl3 && ((configuration.topNavigationQuickLinkIcon2 !== null) && (configuration.topNavigationQuickLinkIcon3.assetUrl !== null))) ]}
+                            {[ let linkLabel = (configuration.topNavigationQuickLinkAriaLabel3 ? configuration.topNavigationQuickLinkAriaLabel3 : "Open site") /]}
+                            {[ let linkUrl = configuration.topNavigationQuickLinkUrl3 /]}
+                            <a href="{{ linkUrl }}" class="quick-link" target="blank" aria-label="{{ linkLabel }}">
+                                <img src="{{ configuration.topNavigationQuickLinkIcon3.assetUrl }}" alt="{{ linkLabel }}" />
+                            </a>
+                        {[/]}
+                        {[ if (configuration.topNavigationQuickLinkUrl4 && ((configuration.topNavigationQuickLinkIcon4 !== null) && (configuration.topNavigationQuickLinkIcon4.assetUrl !== null))) ]}
+                            {[ let linkLabel = (configuration.topNavigationQuickLinkAriaLabel4 ? configuration.topNavigationQuickLinkAriaLabel4 : "Open site") /]}
+                            {[ let linkUrl = configuration.topNavigationQuickLinkUrl4 /]}
+                            <a href="{{ linkUrl }}" class="quick-link" target="blank" aria-label="{{ linkLabel }}">
+                                <img src="{{ configuration.topNavigationQuickLinkIcon4.assetUrl }}" alt="{{ linkLabel }}" />
+                            </a>
+                        {[/]}
+                        {[ if (configuration.topNavigationQuickLinkUrl5 && ((configuration.topNavigationQuickLinkIcon5 !== null) && (configuration.topNavigationQuickLinkIcon5.assetUrl !== null))) ]}
+                            {[ let linkLabel = (configuration.topNavigationQuickLinkAriaLabel5 ? configuration.topNavigationQuickLinkAriaLabel5 : "Open site") /]}
+                            {[ let linkUrl = configuration.topNavigationQuickLinkUrl5 /]}
+                            <a href="{{ linkUrl }}" class="quick-link" target="blank" aria-label="{{ linkLabel }}">
+                                <img src="{{ configuration.topNavigationQuickLinkIcon5.assetUrl }}" alt="{{ linkLabel }}" />
+                            </a>
+                        {[/]}
+                        </div>
+                    {[/]}
+                    {* End Ubisoft custom *}
                     {[ if (configuration.searchButtonType === "Icon + label") ]}
                         <button class="btn-icon-button btn-search search expanded" aria-label="Search in documentation">
                             {[ inject "icon_search" context configuration /]} Search...

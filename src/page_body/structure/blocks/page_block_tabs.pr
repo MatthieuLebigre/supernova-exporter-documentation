@@ -77,6 +77,29 @@
       {[/]}
     </div>
 
+  {[ elseif (variant === "do-dont") ]}
+    {* Tab variant to display a Do / Don't comparison *}
+    <div class="row tabs-as-columns">
+      {[ if (block.children.length === 2) ]}
+        {[ map (block.children.enumerated()) to index tab ]}
+            {[ if (index === '0') ]}
+              <div class="col-sm do-block">
+                {[ for child in tab.children ]}
+                  {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
+                {[/]}
+              </div>
+            {[/]}
+            {[ if (index === '1') ]}
+              <div class="col-sm dont-block">
+                {[ for child in tab.children ]}
+                  {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
+                {[/]}
+              </div>
+            {[/]}
+        {[/]}
+      {[/]}
+    </div>
+
   {[ else ]}
     {* Default variant - tabs with header row and content below it *}
     {* Tab navigation header *}

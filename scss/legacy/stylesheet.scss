@@ -276,6 +276,12 @@ ol>.block-children {
         --pageHeaderMargin: 20px;
         --pageHeaderRadius: 12px;
         --pageHeaderBorderColor: transparent;
+        max-width: var(--contentMaxWidth);
+        width: 100%;
+    }
+
+    &.limit-width {
+        margin: auto;
     }
 }
 
