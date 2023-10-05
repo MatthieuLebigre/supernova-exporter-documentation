@@ -1193,6 +1193,54 @@
           "thumbnail": "thumbnails/Shortcuts_ImageTop-1.png"
         },
         {
+          "name": "Image only (4 columns)",
+          "key": "image-only-4",
+          "description": "Four items in a row, each with only a large image.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-4.png"
+        },
+        {
+          "name": "Image only (3 columns)",
+          "key": "image-only-3",
+          "description": "Three items in a row, each with only a large image.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-3.png"
+        },
+        {
+          "name": "Image only (2 columns)",
+          "key": "image-only-2",
+          "description": "Two items in a row, each with only a large image.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-2.png"
+        },
+        {
+          "name": "Image only (Full width)",
+          "key": "image-only-1",
+          "description": "One full-width item, with only a large image.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-1.png"
+        },
+        {
+          "name": "No image (4 columns)",
+          "key": "no-image-4",
+          "description": "Four items in a row, each with only the text (no image).",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-4.png"
+        },
+        {
+          "name": "No image (3 columns)",
+          "key": "no-image-3",
+          "description": "Three items in a row, each with only the text (no image).",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-3.png"
+        },
+        {
+          "name": "No image (2 columns)",
+          "key": "no-image-2",
+          "description": "Two items in a row, each with only the text (no image).",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-2.png"
+        },
+        {
+          "name": "No image (Full width)",
+          "key": "no-image-1",
+          "description": "One full-width item, with only the text (no image).",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-1.png"
+        },
+        {
           "name": "Leading image (2 columns)",
           "key": "image-leading-2",
           "description": "Two items in a row, each with a large image on the left.",
