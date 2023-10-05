@@ -388,7 +388,6 @@ ol>.block-children {
 
 #section-content-page {
     max-width: var(--contentMaxWidth);
-    width: calc(100% - 240px); /* removing the width of the table of contents */
     margin-bottom: 100px;
 }
 

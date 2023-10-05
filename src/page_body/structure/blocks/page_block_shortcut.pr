@@ -1,4 +1,5 @@
-{[ const shortcut = context /]}
+{[ const shortcut = context.shortcut /]}
+{[ const variantKey = context.variantKey /]}
 
 {[ if (shortcut.title && !shortcut.title.startsWith("_")) ]} 
     {[ if shortcut.externalUrl ]}
@@ -38,16 +39,22 @@
         <a class="shortcut-item"> 
     {[/]}
 
-        {[ if shortcut.previewUrl ]}
-        <div class="preview" style="background: url({{ shortcut.previewUrl }});background-size: cover;background-position: center;"></div>
-        {[ else ]}
-        <div class="preview empty"></div>
-        {[/]}
-        <div class="content">
-            <p class="title">{{ withHTMLNewlines(shortcut.title) }}</p>
-            {[ if (shortcut.description && shortcut.description != "-") ]}
-                <p class="description">{{ withHTMLNewlines(shortcut.description) }}</p>    
+        {[ if !variantKey.startsWith("no-image") ]}
+            {[ if shortcut.previewUrl ]}
+            <div class="preview" style="background: url({{ shortcut.previewUrl }});background-size: cover;background-position: center;"></div>
+            {[ else ]}
+            <div class="preview empty"></div>
             {[/]}
-        </div>
+        {[/]}
+        {[ if !variantKey.startsWith("image-only") ]}
+            <div class="content">
+                {[ if (shortcut.title && shortcut.title != "-") ]}
+                    <p class="title">{{ withHTMLNewlines(shortcut.title) }}</p>
+                {[/]}
+                {[ if (shortcut.description && shortcut.description != "-") ]}
+                    <p class="description">{{ withHTMLNewlines(shortcut.description) }}</p>    
+                {[/]}
+            </div>
+        {[/]}
     </a>
 {[/]}
