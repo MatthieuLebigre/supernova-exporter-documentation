@@ -968,6 +968,28 @@
           }
         ]
       }
+      {
+        "key": "io.ubisoft.documentation-main.downloadable-link",
+        "category": "Media Blocks",
+        "title": "Downloadable link",
+        "description": "Display a downloadable link",
+        "icon": "icons/custom-block-download.png",
+        "mode": "block",
+        "properties": [
+          {
+            "key": "url",
+            "default": "",
+            "type": "string",
+            "label": "URL"
+          },
+          {
+            "key": "caption",
+            "default": "",
+            "type": "string",
+            "label": "Caption"
+          }
+        ]
+      }
     ],
     "blockVariants": {
       "Tabs": [
