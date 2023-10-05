@@ -12,8 +12,8 @@
   "author": "Supernova.io",
   "license": "MIT",
   "dependencies": {
-    "@egg/web": "0.18.9",
-    "@egg/theme-default": "0.11.9",
+    "@egg/web": "0.19.5",
+    "@egg/theme-default": "0.11.18",
     "get-contrast": "^3.0.0",
     "short-hash": "^1.0.0",
     "showdown": "^2.1.0"
