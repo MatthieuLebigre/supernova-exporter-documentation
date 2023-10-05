@@ -3,7 +3,8 @@
 
 {* Create generic embed block *}
 {[ if block.properties.url ]}
-  <a href="{{ block.properties.url }}" class="shortcut-item" target="_blank">
+<div class="content-block content-block--shortcuts{{ getVariantClass(variant) }}" id="{{ getSearchIDString(block.id) }}">
+  <a href="{{ block.properties.url }}" class="shortcut-item" download>
     <div class="content">
       <p class="title">{{ withHTMLNewlines(block.properties.title) }}</p>
       {[ if (block.properties && block.properties.description != "-") ]}
@@ -11,4 +12,5 @@
       {[/]}
     </div>
   </a>
+</div>
 {[/]}
