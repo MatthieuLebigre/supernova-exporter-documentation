@@ -120,6 +120,8 @@
   // 3 columns
   &.variant-image-top-3,
   &.variant-icon-top-3,
+  &.variant-image-only-3,
+  &.variant-no-image-3,
   &.variant-icon-leading-3 {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: calc(var(--shortcutGridGap) * 1.5); 
@@ -129,6 +131,8 @@
   // 1 column
   &.variant-icon-leading-1,
   &.variant-image-leading-1,
+  &.variant-image-only-1,
+  &.variant-no-image-1,
   &.variant-image-top-1 {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: var(--shortcutGridGap);
@@ -137,6 +141,8 @@
   // Image on top – 2 columns
   &.variant-image-top-2,
   &.variant-icon-top-2,
+  &.variant-image-only-2,
+  &.variant-no-image-2,
   &.variant-icon-leading-2,
   &.variant-image-leading-2 {
     grid-template-columns: repeat(2, 1fr);

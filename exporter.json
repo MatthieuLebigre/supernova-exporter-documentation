@@ -1187,6 +1187,30 @@
           "thumbnail": "thumbnails/Shortcuts_ImageTop-2.png"
         },
         {
+          "name": "Image on top (1/3 - 2/3)",
+          "key": "image-top-1-3--2-3",
+          "description": "Two items in a row, each with a large image on top, separated with this ratio: 1/3 2/3.",
+          "thumbnail": "thumbnails/Shortcuts_ImageTop-1-3_2-3.png"
+        },
+        {
+          "name": "Image on top (2/3 - 1/3)",
+          "key": "image-top-2-3--1-3",
+          "description": "Two items in a row, each with a large image on top, separated with this ratio: 2/3 1/3.",
+          "thumbnail": "thumbnails/Shortcuts_ImageTop-2-3_1-3.png"
+        },
+        {
+          "name": "Image on top (1/4 - 3/4)",
+          "key": "image-top-1-4--3-4",
+          "description": "Two items in a row, each with a large image on top, separated with this ratio: 1/4 3/4.",
+          "thumbnail": "thumbnails/Shortcuts_ImageTop-1-4_3-4.png"
+        },
+        {
+          "name": "Image on top (3/4 - 1/4)",
+          "key": "image-top-3-4--1-4",
+          "description": "Two items in a row, each with a large image on top, separated with this ratio: 3/4 1/4.",
+          "thumbnail": "thumbnails/Shortcuts_ImageTop-3-4_1-4.png"
+        },
+        {
           "name": "Image on top (Full width)",
           "key": "image-top-1",
           "description": "One full-width item, with a large image on top.",
