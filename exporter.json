@@ -1235,6 +1235,30 @@
           "thumbnail": "thumbnails/Shortcuts_ImageOnly-2.png"
         },
         {
+          "name": "Image only (1/3 - 2/3)",
+          "key": "image-only-1-3--2-3",
+          "description": "Two items in a row, each with only a large image, separated with this ratio: 1/3 2/3.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-1-3--2-3.png"
+        },
+        {
+          "name": "Image only (2/3 - 1/3)",
+          "key": "image-only-2-3--1-3",
+          "description": "Two items in a row, each with only a large image, separated with this ratio: 2/3 1/3.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-2-3--1-3.png"
+        },
+        {
+          "name": "Image only (1/4 - 3/4)",
+          "key": "image-only-1-4--3-4",
+          "description": "Two items in a row, each with only a large image, separated with this ratio: 1/4 3/4.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-1-4--3-4.png"
+        },
+        {
+          "name": "Image only (3/4 - 1/4)",
+          "key": "image-only-3-4--1-4",
+          "description": "Two items in a row, each with only a large image, separated with this ratio: 3/4 1/4.",
+          "thumbnail": "thumbnails/Shortcuts_ImageOnly-3-4--1-4.png"
+        },
+        {
           "name": "Image only (Full width)",
           "key": "image-only-1",
           "description": "One full-width item, with only a large image.",
@@ -1259,6 +1283,30 @@
           "thumbnail": "thumbnails/Shortcuts_NoImage-2.png"
         },
         {
+          "name": "No image (1/3 - 2/3)",
+          "key": "no-image-1-3--2-3",
+          "description": "Two items in a row, each with only the text (no image), separated with this ratio: 1/3 2/3.",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-1-3--2-3.png"
+        },
+        {
+          "name": "No image (2/3 - 1/3)",
+          "key": "no-image-2-3--1-3",
+          "description": "Two items in a row, each with only the text (no image), separated with this ratio: 2/3 1/3.",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-2-3--1-3.png"
+        },
+        {
+          "name": "No image (1/4 - 3/4)",
+          "key": "no-image-1-4--3-4",
+          "description": "Two items in a row, each with only the text (no image), separated with this ratio: 1/4 3/4.",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-1-4--3-4.png"
+        },
+        {
+          "name": "No image (3/4 - 1/4)",
+          "key": "no-image-3-4--1-4",
+          "description": "Two items in a row, each with only the text (no image), separated with this ratio: 3/4 1/4.",
+          "thumbnail": "thumbnails/Shortcuts_NoImage-3-4--1-4.png"
+        },
+        {
           "name": "No image (Full width)",
           "key": "no-image-1",
           "description": "One full-width item, with only the text (no image).",
@@ -1269,6 +1317,30 @@
           "key": "image-leading-2",
           "description": "Two items in a row, each with a large image on the left.",
           "thumbnail": "thumbnails/Shortcuts_ImageLeading-2.png"
+        },
+        {
+          "name": "Leading image (1/3 - 2/3)",
+          "key": "image-leading-1-3--2-3",
+          "description": "Two items in a row, each with a large image on the left, separated with this ratio: 1/3 2/3.",
+          "thumbnail": "thumbnails/Shortcuts_ImageLeading-1-3--2-3.png"
+        },
+        {
+          "name": "Leading image (2/3 - 1/3)",
+          "key": "image-leading-2-3--1-3",
+          "description": "Two items in a row, each with a large image on the left, separated with this ratio: 2/3 1/3.",
+          "thumbnail": "thumbnails/Shortcuts_ImageLeading-2-3--1-3.png"
+        },
+        {
+          "name": "Leading image (1/4 - 3/4)",
+          "key": "image-leading-1-4--3-4",
+          "description": "Two items in a row, each with a large image on the left, separated with this ratio: 1/4 3/4.",
+          "thumbnail": "thumbnails/Shortcuts_ImageLeading-1-4--3-4.png"
+        },
+        {
+          "name": "Leading image (3/4 - 1/4)",
+          "key": "image-leading-3-4--1-4",
+          "description": "Two items in a row, each with a large image on the left, separated with this ratio: 3/4 1/4.",
+          "thumbnail": "thumbnails/Shortcuts_ImageLeading-3-4--1-4.png"
         },
         {
           "name": "Leading image (Full width)",
@@ -1295,6 +1367,30 @@
           "thumbnail": "thumbnails/Shortcuts_IconTop-2.png"
         },
         {
+          "name": "Icon on top (1/3 - 2/3)",
+          "key": "icon-top-1-3--2-3",
+          "description": "Two items in a row, each with a large icon on top, separated with this ratio: 1/3 2/3.",
+          "thumbnail": "thumbnails/Shortcuts_IconTop-1-3--2-3.png"
+        },
+        {
+          "name": "Icon on top (2/3 - 1/3)",
+          "key": "icon-top-2-3--1-3",
+          "description": "Two items in a row, each with a large icon on top, separated with this ratio: 2/3 1/3.",
+          "thumbnail": "thumbnails/Shortcuts_IconTop-2-3--1-3.png"
+        },
+        {
+          "name": "Icon on top (1/4 - 3/4)",
+          "key": "icon-top-1-4--3-4",
+          "description": "Two items in a row, each with a large icon on top, separated with this ratio: 1/4 3/4.",
+          "thumbnail": "thumbnails/Shortcuts_IconTop-1-4--3-4.png"
+        },
+        {
+          "name": "Icon on top (3/4 - 1/4)",
+          "key": "icon-top-3-4--1-4",
+          "description": "Two items in a row, each with a large icon on top, separated with this ratio: 3/4 1/4.",
+          "thumbnail": "thumbnails/Shortcuts_IconTop-3-4--1-4.png"
+        },
+        {
           "name": "Leading icon (3 columns)",
           "key": "icon-leading-3",
           "description": "Three items in a row, each with a large icon on the left.",
@@ -1305,6 +1401,30 @@
           "key": "icon-leading-2",
           "description": "Two items in a row, each with a large icon on the left.",
           "thumbnail": "thumbnails/Shortcuts_IconLeading-2.png"
+        },
+        {
+          "name": "Leading icon (1/3 - 2/3)",
+          "key": "icon-leading-1-3--2-3",
+          "description": "Two items in a row, each with a large icon on the left, separated with this ratio: 1/3 2/3.",
+          "thumbnail": "thumbnails/Shortcuts_IconLeading-1-3--2-3.png"
+        },
+        {
+          "name": "Leading icon (2/3 - 1/3)",
+          "key": "icon-leading-2-3--1-3",
+          "description": "Two items in a row, each with a large icon on the left, separated with this ratio: 2/3 1/3.",
+          "thumbnail": "thumbnails/Shortcuts_IconLeading-2-3--1-3.png"
+        },
+        {
+          "name": "Leading icon (1/4 - 3/4)",
+          "key": "icon-leading-1-4--3-4",
+          "description": "Two items in a row, each with a large icon on the left, separated with this ratio: 1/4 3/4.",
+          "thumbnail": "thumbnails/Shortcuts_IconLeading-1-4--3-4.png"
+        },
+        {
+          "name": "Leading icon (3/4 - 1/4)",
+          "key": "icon-leading-3-4--1-4",
+          "description": "Two items in a row, each with a large icon on the left, separated with this ratio: 3/4 1/4.",
+          "thumbnail": "thumbnails/Shortcuts_IconLeading-3-4--1-4.png"
         },
         {
           "name": "Leading icon (Full width)",
