@@ -983,10 +983,16 @@
             "label": "URL"
           },
           {
-            "key": "caption",
+            "key": "title",
             "default": "",
             "type": "string",
-            "label": "Caption"
+            "label": "Title"
+          },
+          {
+            "key": "description",
+            "default": "",
+            "type": "string",
+            "label": "Description"
           }
         ]
       }

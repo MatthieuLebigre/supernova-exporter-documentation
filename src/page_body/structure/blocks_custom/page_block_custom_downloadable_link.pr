@@ -1,0 +1,14 @@
+{* Get generic embed block payload *}
+{[ const block = context /]}
+
+{* Create generic embed block *}
+{[ if block.properties.url ]}
+  <a href="{{ block.properties.url }}" class="shortcut-item" target="_blank">
+    <div class="content">
+      <p class="title">{{ withHTMLNewlines(block.properties.title) }}</p>
+      {[ if (block.properties && block.properties.description != "-") ]}
+        <p class="description">{{ withHTMLNewlines(block.properties.description) }}</p>    
+      {[/]}
+    </div>
+  </a>
+{[/]}
