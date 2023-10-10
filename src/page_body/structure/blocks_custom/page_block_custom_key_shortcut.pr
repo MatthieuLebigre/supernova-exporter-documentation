@@ -1,4 +1,9 @@
 {* Get generic embed block payload *}
 {[ const block = context /]}
 
-<div>shortcut</div>
+<p>
+  <mark>{{block.key_code}}</mark>
+</p>
+<p>
+  {{block.description}}
+</p>

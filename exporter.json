@@ -977,7 +977,7 @@
         "mode": "block",
         "properties": [
           {
-            "key": "key",
+            "key": "key_code",
             "default": "",
             "type": "string",
             "label": "The key shortcut"
