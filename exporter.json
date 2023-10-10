@@ -1182,6 +1182,12 @@
           "key": "stack",
           "description": "Full width of the page, great for color tokens.",
           "thumbnail": "thumbnails/Token_StackItem.png"
+        },
+        {
+          "name": "One liner",
+          "key": "inline",
+          "description": "Short preview of a token",
+          "thumbnail": "thumbnails/Token_Inline.png"
         }
       ],
       "Shortcuts": [

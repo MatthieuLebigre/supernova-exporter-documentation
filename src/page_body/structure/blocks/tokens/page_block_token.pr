@@ -22,6 +22,8 @@
             {[ inject "page_block_token_variant_stack_item" context ({"token": token, "block": block}) /]}
         </div>
 
+      {[ elseif (variant === "inline") ]}
+        {[ inject "page_block_token_variant_inline" context ({"token": token, "block": block}) /]}
     {[ else ]}
     {* Default variant - displayed as a grid, support 2/3/4 items in a row (4 is default) *}
 
