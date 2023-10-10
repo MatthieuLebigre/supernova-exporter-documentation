@@ -327,7 +327,7 @@ ol>.block-children {
 
 .container-tabs {
     width: 100%;
-    padding: 0 var(--contentContainerPadding);
+    padding: 24px var(--contentContainerPadding) 0 var(--contentContainerPadding);
     margin-bottom: 0px;
     position: relative;
     position: sticky;
@@ -389,6 +389,7 @@ ol>.block-children {
 #section-content-page {
     max-width: var(--contentMaxWidth);
     margin-bottom: 100px;
+    width: 100%;
 }
 
 @media (max-width: 1169px) {

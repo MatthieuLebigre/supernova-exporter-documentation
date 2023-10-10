@@ -1019,6 +1019,30 @@
           "thumbnail": "thumbnails/Tabs_Columns.png"
         },
         {
+          "name": "Columns 1/3 - 2/3",
+          "key": "columns_1-3_2-3",
+          "description": "Tab content displayed as vertical columns with the ratio 1/3 - 2/3. Only works for two columns.",
+          "thumbnail": "thumbnails/Tabs_Columns_1-3_2-3.png"
+        },
+        {
+          "name": "Columns 2/3 - 1/3",
+          "key": "columns_2-3_1-3",
+          "description": "Tab content displayed as vertical columns with the ratio 2/3 - 1/3. Only works for two columns.",
+          "thumbnail": "thumbnails/Tabs_Columns_2-3_1-3.png"
+        },
+        {
+          "name": "Columns 1/4 - 3/4",
+          "key": "columns_1-4_3-4",
+          "description": "Tab content displayed as vertical columns with the ratio 1/4 - 3/4. Only works for two columns.",
+          "thumbnail": "thumbnails/Tabs_Columns_1-4_3-4.png"
+        },
+        {
+          "name": "Columns 3/4 - 1/4",
+          "key": "columns_3-4_1-4",
+          "description": "Tab content displayed as vertical columns with the ratio 3/4 - 1/4. Only works for two columns.",
+          "thumbnail": "thumbnails/Tabs_Columns_3-4_1-4.png"
+        },
+        {
           "name": "Accordion",
           "key": "accordion",
           "description": "Tabs displayed as an accordion.",

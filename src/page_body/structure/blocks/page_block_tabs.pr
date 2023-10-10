@@ -46,13 +46,15 @@
       {[ let id = tab.id.prefixed("T") /]}
       {[ if (tab.type === "TabItem") ]}
       <div class="accordion-section">
-        <a class="{{ index === "0" ? "active" : "collapsed" }}" id="{{ id }}-tab" data-toggle="collapse" data-target="#collapse-{{ id }}">
+        {* Ubisoft change: all collapsed by default *}
+        <a class="collapsed" id="{{ id }}-tab" data-toggle="collapse" data-target="#collapse-{{ id }}">
           <div class="accordion-header" id="{{ id }}">
           <div class="icon">{[ inject "icon_chevron_right" context configuration /]}</div>{{ tab.caption }}
           </div>
         </a>
 
-        <div id="collapse-{{ id }}" class="collapse {{ index === "0" ? "show" : "" }}" aria-labelledby="{{ id }}" data-parent="#{{ blockId }}">
+        {* Ubisoft change: all collapsed by default *}
+        <div id="collapse-{{ id }}" class="collapse" aria-labelledby="{{ id }}" data-parent="#{{ blockId }}">
           <div class="accordion-body">
           {[ for child in tab.children ]}
               {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
