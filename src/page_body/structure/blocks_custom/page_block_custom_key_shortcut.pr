@@ -1,0 +1,4 @@
+{* Get generic embed block payload *}
+{[ const block = context /]}
+
+<div>shortcut</div>

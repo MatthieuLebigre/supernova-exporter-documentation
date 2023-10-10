@@ -66,12 +66,12 @@
   {[/]}
   </div>
 
-  {[ elseif (variant === "columns") ]}
+  {[ elseif (variant.startsWith("columns")) ]}
     {* Tab variant where tabs render as columns *}
     <div class="row tabs-as-columns">
       {[ map (block.children.enumerated()) to index tab ]}
           {[ let id = tab.id.prefixed("T") /]}
-        <div class="col-sm">
+        <div class="{{ getVariantColumnsClass(variant, index) }}">
           {[ for child in tab.children ]}
             {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
           {[/]}

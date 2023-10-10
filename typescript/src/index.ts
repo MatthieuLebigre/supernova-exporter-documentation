@@ -40,6 +40,7 @@ import {
   getSearchIDString,
   getUrlExtension,
   getVariantClass,
+  getVariantColumnsClass,
   highlightSafeString,
   normalizeStringForSearch,
   safeHtmlString,
@@ -181,3 +182,4 @@ Pulsar.registerFunction('safeHtmlString', safeHtmlString);
 Pulsar.registerFunction('findComponentMainDemo', findComponentMainDemo);
 Pulsar.registerFunction('findComponentDescription', findComponentDescription);
 Pulsar.registerFunction('findSharedComponentDemo', findSharedComponentDemo);
+Pulsar.registerFunction('getVariantColumnsClass', getVariantColumnsClass);

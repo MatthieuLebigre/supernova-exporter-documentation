@@ -333,3 +333,21 @@ export function safeHtmlString(block: DocumentationPageBlockCode) {
   // Make sure it is properly safe for HTML rendering
   return string;
 }
+
+// Ubisoft custom:
+
+/** Return the class to be used for columns */
+export function getVariantColumnsClass(variant: string, index: string): string {
+  switch (variant) {
+    case 'columns_1-3_2-3':
+      return index === '0' ? 'col-sm-4' : 'col-sm';
+    case 'columns_2-3_1-3':
+      return index === '1' ? 'col-sm-4' : 'col-sm';
+    case 'columns_1-4_3-4':
+      return index === '0' ? 'col-sm-3' : 'col-sm';
+    case 'columns_3-4_1-4':
+      return index === '1' ? 'col-sm-3' : 'col-sm';
+    default:
+      return 'col-sm';
+  }
+}

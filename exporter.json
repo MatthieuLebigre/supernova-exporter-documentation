@@ -969,24 +969,18 @@
         ]
       },
       {
-        "key": "io.ubisoft.documentation-main.downloadable-link",
+        "key": "io.ubisoft.documentation-main.key-shortcut",
         "category": "Media Blocks",
-        "title": "Downloadable link",
-        "description": "Display a downloadable link",
-        "icon": "icons/custom-block-download.png",
+        "title": "Key shortcut",
+        "description": "Display a key shortcut",
+        "icon": "icons/custom-block-checklist-all.png",
         "mode": "block",
         "properties": [
           {
-            "key": "url",
+            "key": "key",
             "default": "",
             "type": "string",
-            "label": "URL"
-          },
-          {
-            "key": "title",
-            "default": "",
-            "type": "string",
-            "label": "Title"
+            "label": "The key shortcut"
           },
           {
             "key": "description",

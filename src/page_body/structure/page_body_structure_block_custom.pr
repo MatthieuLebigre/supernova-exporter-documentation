@@ -17,6 +17,6 @@
 {* Ubisoft custom: *}
 {[ case "io.ubisoft.documentation-main.ux-guidebook" ]}
     {[ inject "page_block_custom_ux-guidebook" context block /]}
-{[ case "io.ubisoft.documentation-main.downloadable-link" ]}
-    {[ inject "page_block_custom_downloadable_link" context block /]}
+{[ case "io.ubisoft.documentation-main.key-shortcut" ]}
+    {[ inject "page_block_custom_key_shortcut" context block /]}
 {[/]}
