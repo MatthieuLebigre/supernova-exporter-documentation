@@ -2,8 +2,8 @@
 {[ const block = context /]}
 
 <p>
-  <mark>{{block.key_code}}</mark>
+  <mark>{{block.properties.key}}</mark>
 </p>
 <p>
-  {{block.description}}
+  {{block.properties.description}}
 </p>
