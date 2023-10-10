@@ -1570,6 +1570,19 @@
           "key": "egg-render-main",
           "description": "Display the HTML as the main live Demo in the page header (with EGG components)"
         }
+      ],
+      "Image": [
+        {
+          "name": "Default",
+          "key": "default",
+          "isDefault": true,
+          "description": "Display an image."
+        },
+        {
+          "name": "Lightbox",
+          "key": "lightbox",
+          "description": "Display an image and use a lightbox"
+        }
       ]
     }
   }

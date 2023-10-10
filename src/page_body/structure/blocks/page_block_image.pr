@@ -2,6 +2,7 @@
 {[ const block = context /]}
 {[ let imgClass = "" /]}
 {[ let alignClass = "" /]}
+{[ let variant = block.variantKey /]}
 
 {* Create image with lightbox interaction, or ignore it if url is not set *}
 {[ if block.url ]}
@@ -25,8 +26,13 @@
 
 <div class="content-block content-block--image {{ alignClass }}" id="{{ getSearchIDString(block.id) }}">
 {* Add <a class="popup-img" href="{{ block.url }}"> <img> </a> if you want to enable lightbox-functionality *}
-    <img src="{{ block.url }}" class="{{ imgClass }}" alt="{{ block.caption }}" />
-    
+    {[ if variant === "lightbox" ]}
+        <a class="popup-img" href="{{ block.url }}">
+    {[/]}
+        <img src="{{ block.url }}" class="{{ imgClass }}" alt="{{ block.caption }}" />
+    {[ if variant === "lightbox" ]}
+        </a>
+    {[/]}
 {* Add caption if set *}
 {[ if block.caption ]}
     <p class="caption">{{ withHTMLNewlines(block.caption) }}</p>
