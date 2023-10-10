@@ -1,0 +1,12 @@
+{[ const token = context.token /]}
+{[ const theme = context.theme /]}
+
+{[ if token.tokenType.equals("Color") ]}
+    <div class="preview">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="color-preview" style="background-color: #{{ token.value.hex }};">
+        </div>
+        <span class="token-value">{{token.name}}</span>
+        {[ inject "page_block_token_theme_badge" context theme /]}
+    </div>
+{[/]}
