@@ -970,7 +970,7 @@
       },
       {
         "key": "io.ubisoft.documentation-main.key-shortcut",
-        "category": "Media Blocks",
+        "category": "Text Blocks",
         "title": "Key shortcut",
         "description": "Display a key shortcut",
         "icon": "icons/custom-block-checklist-all.png",
